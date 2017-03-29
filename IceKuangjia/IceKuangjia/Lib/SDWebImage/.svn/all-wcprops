@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F
+END
+MKAnnotationView+WebCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/MKAnnotationView+WebCache.h
+END
+SDImageCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDImageCache.h
+END
+SDWebImageDecoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageDecoder.h
+END
+MKAnnotationView+WebCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/MKAnnotationView+WebCache.m
+END
+SDWebImageManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageManager.h
+END
+SDImageCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDImageCache.m
+END
+SDWebImageDecoder.m
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageDecoder.m
+END
+SDWebImageManager+MJ.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageManager+MJ.h
+END
+UIButton+WebCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIButton+WebCache.h
+END
+SDWebImageDownloaderOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageDownloaderOperation.h
+END
+SDWebImageManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageManager.m
+END
+UIImageView+WebCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIImageView+WebCache.h
+END
+UIImage+WebP.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIImage+WebP.h
+END
+SDWebImageManager+MJ.m
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageManager+MJ.m
+END
+UIButton+WebCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIButton+WebCache.m
+END
+SDWebImageDownloaderOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageDownloaderOperation.m
+END
+UIImageView+WebCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIImageView+WebCache.m
+END
+UIImage+WebP.m
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIImage+WebP.m
+END
+NSData+ImageContentType.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/NSData+ImageContentType.h
+END
+SDWebImageDownloader.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageDownloader.h
+END
+UIView+WebCacheOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIView+WebCacheOperation.h
+END
+NSData+ImageContentType.m
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/NSData+ImageContentType.m
+END
+UIView+WebCacheOperation.m
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIView+WebCacheOperation.m
+END
+SDWebImageDownloader.m
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageDownloader.m
+END
+UIImageView+HighlightedWebCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIImageView+HighlightedWebCache.h
+END
+SDWebImageCompat.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageCompat.h
+END
+UIImageView+HighlightedWebCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIImageView+HighlightedWebCache.m
+END
+UIImage+MultiFormat.h
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIImage+MultiFormat.h
+END
+SDWebImagePrefetcher.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImagePrefetcher.h
+END
+SDWebImageCompat.m
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageCompat.m
+END
+UIImage+GIF.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIImage+GIF.h
+END
+UIImage+MultiFormat.m
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIImage+MultiFormat.m
+END
+SDWebImagePrefetcher.m
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImagePrefetcher.m
+END
+UIImage+GIF.m
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/UIImage+GIF.m
+END
+SDWebImageOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/ios/!svn/ver/1497/SmallUniverse/SmallLanguageUniverse/Libraries/SDWebImage_%E5%9B%BE%E5%83%8F/SDWebImageOperation.h
+END
