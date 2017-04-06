@@ -111,8 +111,8 @@
 		A053D6B71D2F31A700102A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0DC535F1D6FDE33000CE11B /* IceCirculationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceCirculationView.h; sourceTree = "<group>"; };
 		A0DC53601D6FDE33000CE11B /* IceCirculationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceCirculationView.m; sourceTree = "<group>"; };
-		C57B52391E8E45F90074811D /* TimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeHelper.h; sourceTree = "<group>"; };
-		C57B523A1E8E45F90074811D /* TimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeHelper.m; sourceTree = "<group>"; };
+		C57B52391E8E45F90074811D /* TimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeHelper.h; path = ../Base/TimeHelper.h; sourceTree = "<group>"; };
+		C57B523A1E8E45F90074811D /* TimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeHelper.m; path = ../Base/TimeHelper.m; sourceTree = "<group>"; };
 		C5851A561E8B5412004BC0E1 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		C5851A571E8B5412004BC0E1 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		C5851A581E8B5412004BC0E1 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -178,8 +178,6 @@
 		A04900231D548F07009E4CCC /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				C57B52391E8E45F90074811D /* TimeHelper.h */,
-				C57B523A1E8E45F90074811D /* TimeHelper.m */,
 				A04900241D548F07009E4CCC /* IceNavigationController.h */,
 				A04900251D548F07009E4CCC /* IceNavigationController.m */,
 				A04900261D548F07009E4CCC /* IceTabBar.h */,
@@ -209,6 +207,8 @@
 		A049004F1D5490AB009E4CCC /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C57B52391E8E45F90074811D /* TimeHelper.h */,
+				C57B523A1E8E45F90074811D /* TimeHelper.m */,
 				C5851A551E8B5412004BC0E1 /* SDWebImage */,
 				A0DC535F1D6FDE33000CE11B /* IceCirculationView.h */,
 				A0DC53601D6FDE33000CE11B /* IceCirculationView.m */,
