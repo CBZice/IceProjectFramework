@@ -46,6 +46,7 @@
 		C5851A8A1E8B5412004BC0E1 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C5851A741E8B5412004BC0E1 /* UIImageView+HighlightedWebCache.m */; };
 		C5851A8B1E8B5412004BC0E1 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C5851A761E8B5412004BC0E1 /* UIImageView+WebCache.m */; };
 		C5851A8D1E8B5412004BC0E1 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5851A7B1E8B5412004BC0E1 /* UIView+WebCacheOperation.m */; };
+		DF6337828AE8C1FE6B82F1DB /* Pods_IceKuangjia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F55777BB5A588A099A118E /* Pods_IceKuangjia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07F55777BB5A588A099A118E /* Pods_IceKuangjia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceKuangjia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39E4DD776DA925A656C12EEE /* Pods-IceKuangjia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceKuangjia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IceKuangjia/Pods-IceKuangjia.debug.xcconfig"; sourceTree = "<group>"; };
 		A04900071D54705A009E4CCC /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		A04900081D54705A009E4CCC /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		A049000A1D547068009E4CCC /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 		C5851A761E8B5412004BC0E1 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		C5851A7A1E8B5412004BC0E1 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		C5851A7B1E8B5412004BC0E1 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		DC360926EA2437532B4A4212 /* Pods-IceKuangjia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceKuangjia.release.xcconfig"; path = "Pods/Target Support Files/Pods-IceKuangjia/Pods-IceKuangjia.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6337828AE8C1FE6B82F1DB /* Pods_IceKuangjia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +242,8 @@
 				A053D6A91D2F31A700102A55 /* IceKuangjiaTests */,
 				A053D6B41D2F31A700102A55 /* IceKuangjiaUITests */,
 				A053D68E1D2F31A700102A55 /* Products */,
+				B2BA0F892DDD061A8D3207E6 /* Pods */,
+				AB81BCD191578D9B045DD4C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,6 +308,23 @@
 			path = IceKuangjiaUITests;
 			sourceTree = "<group>";
 		};
+		AB81BCD191578D9B045DD4C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07F55777BB5A588A099A118E /* Pods_IceKuangjia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2BA0F892DDD061A8D3207E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39E4DD776DA925A656C12EEE /* Pods-IceKuangjia.debug.xcconfig */,
+				DC360926EA2437532B4A4212 /* Pods-IceKuangjia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C5851A551E8B5412004BC0E1 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,9 +374,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A053D6BA1D2F31A700102A55 /* Build configuration list for PBXNativeTarget "IceKuangjia" */;
 			buildPhases = (
+				1452E89A5C5A9137ADEC841D /* [CP] Check Pods Manifest.lock */,
 				A053D6891D2F31A700102A55 /* Sources */,
 				A053D68A1D2F31A700102A55 /* Frameworks */,
 				A053D68B1D2F31A700102A55 /* Resources */,
+				1264D79F8EEBBFC390D995E1 /* [CP] Embed Pods Frameworks */,
+				DF86C783DEEC6EAF2839DB97 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -470,6 +497,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1264D79F8EEBBFC390D995E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IceKuangjia/Pods-IceKuangjia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1452E89A5C5A9137ADEC841D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF86C783DEEC6EAF2839DB97 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IceKuangjia/Pods-IceKuangjia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A053D6891D2F31A700102A55 /* Sources */ = {
@@ -648,6 +723,7 @@
 		};
 		A053D6BB1D2F31A700102A55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39E4DD776DA925A656C12EEE /* Pods-IceKuangjia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IceKuangjia/PrefixHeader.pch";
@@ -660,6 +736,7 @@
 		};
 		A053D6BC1D2F31A700102A55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC360926EA2437532B4A4212 /* Pods-IceKuangjia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IceKuangjia/PrefixHeader.pch";
