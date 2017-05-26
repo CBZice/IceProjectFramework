@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class IceCirculationView;
+
 @protocol IceCirculationViewDelegate <NSObject>
 
 @optional
 /**
     用于获取当前是哪张图片，可添加点击事件
  */
-- (void)whichPicureBeChanged:(NSInteger)index;
+- (void)iceCirculationView:(IceCirculationView *)iceCirculationView whichPicureBeChanged:(NSInteger)index;
 
 @end
 

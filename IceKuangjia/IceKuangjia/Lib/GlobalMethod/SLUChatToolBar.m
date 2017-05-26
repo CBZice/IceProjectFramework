@@ -65,7 +65,7 @@
 }
 
 - (void)btnClick:(UIButton *)sender{
-    NSLog(@"%ld", sender.tag);
+    NSLog(@"%ld", (long)sender.tag);
 }
 
 - (void)show{

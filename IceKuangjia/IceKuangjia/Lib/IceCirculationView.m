@@ -21,11 +21,18 @@ static NSInteger indexCount;
 
 @property (nonatomic, strong) NSMutableArray *imgNameArr;
 @property (nonatomic, strong) NSMutableArray *imgViewArr;
+@property (nonatomic, strong) NSMutableArray *imagesArr;
 @property (nonatomic, strong) NSTimer *timer;
+
 /**
  时间导致的scrollView偏移，不进行自动切换
  */
 @property (nonatomic, assign) BOOL isTimer;
+
+/**
+在前一次移动未执行完之前，不进行第二次 indexCount++ 操作
+ */
+@property (nonatomic, assign) BOOL shouldStop;
 
 @end
 
@@ -34,13 +41,22 @@ static NSInteger indexCount;
 -(instancetype)initWithFrame:(CGRect)frame Images:(NSArray *)imageArr{
     if (self = [super initWithFrame:frame]) {
         
-        _imgViewArr = [NSMutableArray array];
+        indexCount = 0;
         
+        _imgViewArr = [NSMutableArray array];
+        _imagesArr = [NSMutableArray array];
+        
+        // 初始化滚动视图
         [self setScrollViewWithFrame:frame];
         
+        // 在滚动视图上添加三个 imgView
         [self createCirculationViewWithimgArr:imageArr];
         
+        // 在 imgView 上添加 image
+        [self setScrollViewContentOffSetWithScrollView:_myScrollView];
+        
         [self startTimer];
+
     }
     return self;
 }
@@ -68,18 +84,6 @@ static NSInteger indexCount;
     
     for (int i = 0; i < imgCount; i++) {
         UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(i * self.width, 0, self.width, _myScrollView.height)];
-        NSString *str = nil;
-        if (i == 0) {
-            str = imgArr[imgArr.count - 1];
-        }else{
-            str = imgArr[i - 1];
-        }
-        UIImage *placeImg = self.placeHolder.length != 0 ? [UIImage imageNamed:self.placeHolder]:nil;
-        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:str]]) {
-            [imgView sd_setImageWithURL:[NSURL URLWithString:str] placeholderImage:placeImg];
-        }else{
-            imgView.image = [UIImage imageNamed:str];
-        }
         [_imgViewArr addObject:imgView];
         [_myScrollView addSubview:imgView];
         
@@ -93,9 +97,8 @@ static NSInteger indexCount;
     _myScrollView.contentSize = CGSizeMake(self.width * imgCount, _myScrollView.height);
 }
 - (void)changgePage{
-    if (indexCount < 0) {
-        indexCount = _imgNameArr.count + indexCount;
-    }
+    _isTimer = YES;
+    
     indexCount ++;
     if (indexCount == _imgNameArr.count) {
         indexCount = 0;
@@ -108,10 +111,10 @@ static NSInteger indexCount;
     }];
 }
 
--(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     [self startTimer];
 }
+
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self stopTimer];
@@ -120,60 +123,78 @@ static NSInteger indexCount;
 #pragma mark - 滑动时调用
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (_isTimer)return;
-    if (scrollView.contentOffset.x/self.width >= 2) {
-        if (indexCount < 0) {
-            indexCount = _imgNameArr.count + indexCount;
-        }
+    if (_isTimer || _shouldStop)return;
+    if (scrollView.contentOffset.x >= self.width*2) {
         indexCount ++;
         if (indexCount == _imgNameArr.count) {
             indexCount = 0;
         }
-        _pageControl.currentPage = indexCount;
-        [self setScrollViewContentOffSetWithScrollView:scrollView];
-        
-    }else if (scrollView.contentOffset.x/self.width <= 0){
-        if (indexCount > 0) {
-            indexCount =  indexCount - _imgNameArr.count;
-        }
+        [self setPageAndChangeOffset];
+    }else if (scrollView.contentOffset.x <= 0){
         indexCount --;
-        if (indexCount == -_imgNameArr.count) {
-            indexCount = 0;
-            _pageControl.currentPage = indexCount;
-        }else{
-            _pageControl.currentPage = _imgNameArr.count + indexCount;
+        if (indexCount < 0) {
+            indexCount = _imgNameArr.count - 1;
         }
-        [self setScrollViewContentOffSetWithScrollView:scrollView];
+        [self setPageAndChangeOffset];
     }
+}
+
+- (void)setPageAndChangeOffset{
+    _pageControl.currentPage = indexCount;
+    _shouldStop = YES;
+    [self setScrollViewContentOffSetWithScrollView:_myScrollView];
 }
 
 - (void)setScrollViewContentOffSetWithScrollView:(UIScrollView *)scrollView
 {
+    [scrollView setContentOffset:CGPointMake(self.width, 0)];
+    NSInteger totalCount = _imgNameArr.count;
+    NSInteger afterIndex;
+    NSInteger laterIndex;
     for (int i = 0; i < 3; i++) {
-        NSInteger index = (indexCount - 1 + i)%_imgNameArr.count;
-        if (indexCount < 0) {
-            index = (_imgNameArr.count + indexCount - 1 + i)%_imgNameArr.count;
+        afterIndex = indexCount - 1;
+        laterIndex = indexCount + 1;
+        
+        if (afterIndex < 0) {
+            afterIndex = totalCount - 1;
         }
+        if (laterIndex == totalCount) {
+            laterIndex = 0;
+        }
+        
+        
         UIImageView *imgView = _imgViewArr[i];
-        NSString *str = _imgNameArr[index];
-        if (indexCount == 0 && i == 0) {
-            str = _imgNameArr[_imgNameArr.count - 1];
+        NSString *str = nil;
+        switch (i) {
+            case 0:
+                str = _imgNameArr[afterIndex];
+                break;
+            case 1:
+                str = _imgNameArr[indexCount];
+                break;
+            case 2:
+                str = _imgNameArr[laterIndex];
+                break;
+                
+            default:
+                break;
         }
+        
         UIImage *placeImg = self.placeHolder.length != 0 ? [UIImage imageNamed:self.placeHolder]:nil;
+        
         if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:str]]) {
             [imgView sd_setImageWithURL:[NSURL URLWithString:str] placeholderImage:placeImg];
         }else{
             imgView.image = [UIImage imageNamed:str];
         }
     }
-    [scrollView setContentOffset:CGPointMake(self.width, 0) animated:NO];
+    _shouldStop = NO;
 }
 
 //设置定时器时间时，重启计时器
 -(void)setAnimationDelay:(CGFloat)animationDelay
 {
     _animationDelay = animationDelay;
-    [self stopTimer];
     [self startTimer];
 }
 
@@ -181,9 +202,10 @@ static NSInteger indexCount;
  开始计时器
  */
 - (void)startTimer{
-    _isTimer = YES;
     
-    CGFloat duraion = self.animationDelay == 0 ? 1.5 : self.animationDelay;
+    if (_timer) [self stopTimer];
+    
+    CGFloat duraion = self.animationDelay == 0 ? 2 : self.animationDelay;
     
     _timer = [NSTimer scheduledTimerWithTimeInterval:duraion target:self selector:@selector(changgePage) userInfo:nil repeats:YES];
     //防止进入后台再次进入时，停止运行
@@ -199,11 +221,8 @@ static NSInteger indexCount;
 }
 
 - (void)touchPic{
-    if ([self.delegate respondsToSelector:@selector(whichPicureBeChanged:)]) {
-        if (indexCount < 0) {
-            indexCount = _imgNameArr.count + indexCount;
-        }
-        [self.delegate whichPicureBeChanged:indexCount];
+    if ([self.delegate respondsToSelector:@selector(iceCirculationView: whichPicureBeChanged:)]) {
+        [self.delegate iceCirculationView:self whichPicureBeChanged:indexCount];
     }
 }
 
@@ -211,5 +230,4 @@ static NSInteger indexCount;
 {
     return self.pageControl.currentPage;
 }
-
 @end

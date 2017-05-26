@@ -46,6 +46,14 @@
 		C5851A8A1E8B5412004BC0E1 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C5851A741E8B5412004BC0E1 /* UIImageView+HighlightedWebCache.m */; };
 		C5851A8B1E8B5412004BC0E1 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C5851A761E8B5412004BC0E1 /* UIImageView+WebCache.m */; };
 		C5851A8D1E8B5412004BC0E1 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5851A7B1E8B5412004BC0E1 /* UIView+WebCacheOperation.m */; };
+		C63B4EE71ED7DB3D00436190 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EDF1ED7DB3D00436190 /* 0.jpg */; };
+		C63B4EE81ED7DB3D00436190 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EE01ED7DB3D00436190 /* 1.jpg */; };
+		C63B4EE91ED7DB3D00436190 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EE11ED7DB3D00436190 /* 2.jpg */; };
+		C63B4EEA1ED7DB3D00436190 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EE21ED7DB3D00436190 /* 3.jpg */; };
+		C63B4EEB1ED7DB3D00436190 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EE31ED7DB3D00436190 /* 4.jpg */; };
+		C63B4EEC1ED7DB3D00436190 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EE41ED7DB3D00436190 /* 5.jpg */; };
+		C63B4EED1ED7DB3D00436190 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EE51ED7DB3D00436190 /* 6.jpg */; };
+		C63B4EEE1ED7DB3D00436190 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EE61ED7DB3D00436190 /* 7.jpg */; };
 		DF6337828AE8C1FE6B82F1DB /* Pods_IceKuangjia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F55777BB5A588A099A118E /* Pods_IceKuangjia.framework */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +159,14 @@
 		C5851A761E8B5412004BC0E1 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		C5851A7A1E8B5412004BC0E1 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		C5851A7B1E8B5412004BC0E1 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		C63B4EDF1ED7DB3D00436190 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		C63B4EE01ED7DB3D00436190 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		C63B4EE11ED7DB3D00436190 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		C63B4EE21ED7DB3D00436190 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		C63B4EE31ED7DB3D00436190 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		C63B4EE41ED7DB3D00436190 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		C63B4EE51ED7DB3D00436190 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		C63B4EE61ED7DB3D00436190 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
 		DC360926EA2437532B4A4212 /* Pods-IceKuangjia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceKuangjia.release.xcconfig"; path = "Pods/Target Support Files/Pods-IceKuangjia/Pods-IceKuangjia.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,6 +276,14 @@
 		A053D68F1D2F31A700102A55 /* IceKuangjia */ = {
 			isa = PBXGroup;
 			children = (
+				C63B4EDF1ED7DB3D00436190 /* 0.jpg */,
+				C63B4EE01ED7DB3D00436190 /* 1.jpg */,
+				C63B4EE11ED7DB3D00436190 /* 2.jpg */,
+				C63B4EE21ED7DB3D00436190 /* 3.jpg */,
+				C63B4EE31ED7DB3D00436190 /* 4.jpg */,
+				C63B4EE41ED7DB3D00436190 /* 5.jpg */,
+				C63B4EE51ED7DB3D00436190 /* 6.jpg */,
+				C63B4EE61ED7DB3D00436190 /* 7.jpg */,
 				A049004F1D5490AB009E4CCC /* Lib */,
 				A04900331D548F0E009E4CCC /* Main */,
 				A04900231D548F07009E4CCC /* Base */,
@@ -437,7 +461,7 @@
 				TargetAttributes = {
 					A053D68C1D2F31A700102A55 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = TSS8G68MGT;
+						DevelopmentTeam = R24LQUDUMQ;
 					};
 					A053D6A51D2F31A700102A55 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -476,9 +500,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C63B4EEE1ED7DB3D00436190 /* 7.jpg in Resources */,
+				C63B4EEB1ED7DB3D00436190 /* 4.jpg in Resources */,
+				C63B4EE91ED7DB3D00436190 /* 2.jpg in Resources */,
+				C63B4EE71ED7DB3D00436190 /* 0.jpg in Resources */,
+				C63B4EEC1ED7DB3D00436190 /* 5.jpg in Resources */,
+				C63B4EED1ED7DB3D00436190 /* 6.jpg in Resources */,
 				A053D6A01D2F31A700102A55 /* LaunchScreen.storyboard in Resources */,
 				A053D69D1D2F31A700102A55 /* Assets.xcassets in Resources */,
 				A053D69B1D2F31A700102A55 /* Main.storyboard in Resources */,
+				C63B4EEA1ED7DB3D00436190 /* 3.jpg in Resources */,
+				C63B4EE81ED7DB3D00436190 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +758,7 @@
 			baseConfigurationReference = 39E4DD776DA925A656C12EEE /* Pods-IceKuangjia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R24LQUDUMQ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IceKuangjia/PrefixHeader.pch";
 				INFOPLIST_FILE = IceKuangjia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -739,6 +772,7 @@
 			baseConfigurationReference = DC360926EA2437532B4A4212 /* Pods-IceKuangjia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R24LQUDUMQ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IceKuangjia/PrefixHeader.pch";
 				INFOPLIST_FILE = IceKuangjia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
