@@ -18,4 +18,6 @@
 //屏幕高
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 
+#define WeekSelf __weak typeof(self) weSelf = self;
+
 #endif /* Header_h */
