@@ -37,6 +37,7 @@
 		C63B4EEC1ED7DB3D00436190 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EE41ED7DB3D00436190 /* 5.jpg */; };
 		C63B4EED1ED7DB3D00436190 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EE51ED7DB3D00436190 /* 6.jpg */; };
 		C63B4EEE1ED7DB3D00436190 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EE61ED7DB3D00436190 /* 7.jpg */; };
+		C6425AA91F20934A00A36A68 /* EPGetAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = C6425AA81F20934A00A36A68 /* EPGetAddress.m */; };
 		C6A7653D1EF118290042A0C5 /* IceHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A7653C1EF118290042A0C5 /* IceHttpTool.m */; };
 		C6A765401EF1245C0042A0C5 /* HWHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A7653F1EF1245C0042A0C5 /* HWHttpTool.m */; };
 		DF6337828AE8C1FE6B82F1DB /* Pods_IceKuangjia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F55777BB5A588A099A118E /* Pods_IceKuangjia.framework */; };
@@ -117,6 +118,11 @@
 		C63B4EE41ED7DB3D00436190 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		C63B4EE51ED7DB3D00436190 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
 		C63B4EE61ED7DB3D00436190 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		C6425AA51F20932100A36A68 /* IceCirculationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IceCirculationView.h; sourceTree = "<group>"; };
+		C6425AA71F20934A00A36A68 /* EPGetAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPGetAddress.h; sourceTree = "<group>"; };
+		C6425AA81F20934A00A36A68 /* EPGetAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPGetAddress.m; sourceTree = "<group>"; };
+		C6425AAA1F20962D00A36A68 /* AlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
+		C6425AAB1F2096C000A36A68 /* ColorHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
 		C6A7653B1EF118290042A0C5 /* IceHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceHttpTool.h; sourceTree = "<group>"; };
 		C6A7653C1EF118290042A0C5 /* IceHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceHttpTool.m; sourceTree = "<group>"; };
 		C6A7653E1EF1245C0042A0C5 /* HWHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWHttpTool.h; sourceTree = "<group>"; };
@@ -186,8 +192,11 @@
 		A049004F1D5490AB009E4CCC /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C6425AA71F20934A00A36A68 /* EPGetAddress.h */,
+				C6425AA81F20934A00A36A68 /* EPGetAddress.m */,
 				C57B52391E8E45F90074811D /* TimeHelper.h */,
 				C57B523A1E8E45F90074811D /* TimeHelper.m */,
+				C6425AA51F20932100A36A68 /* IceCirculationView.h */,
 				A0DC535F1D6FDE33000CE11B /* IceCirculationView.h */,
 				A0DC53601D6FDE33000CE11B /* IceCirculationView.m */,
 				A049005A1D549729009E4CCC /* SLUChatToolBar.h */,
@@ -265,8 +274,10 @@
 				A053D69E1D2F31A700102A55 /* LaunchScreen.storyboard */,
 				A053D6A11D2F31A700102A55 /* Info.plist */,
 				A04900101D547089009E4CCC /* PrefixHeader.pch */,
+				C6425AAA1F20962D00A36A68 /* AlertView.h */,
 				A04900111D5470A8009E4CCC /* Header.h */,
 				A04900121D5470B8009E4CCC /* URLPath.h */,
+				C6425AAB1F2096C000A36A68 /* ColorHeader.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -498,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6425AA91F20934A00A36A68 /* EPGetAddress.m in Sources */,
 				C6A765401EF1245C0042A0C5 /* HWHttpTool.m in Sources */,
 				A049005C1D549729009E4CCC /* SLUChatToolBar.m in Sources */,
 				A04900551D549122009E4CCC /* ViewController.m in Sources */,

@@ -10,8 +10,6 @@
 #define Header_h
 
 
-//随机色
-#define Random_color [UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1]
 
 //屏幕宽
 #define WIDTH [UIScreen mainScreen].bounds.size.width
@@ -19,5 +17,13 @@
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 
 #define WeekSelf __weak typeof(self) weSelf = self;
+
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#endif
+
+
 
 #endif /* Header_h */

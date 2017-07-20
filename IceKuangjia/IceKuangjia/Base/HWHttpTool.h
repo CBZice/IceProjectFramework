@@ -8,10 +8,12 @@
 + (void)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure;
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure;
 
-//带json的数据上传
+// 带json的数据上传
 + (void)postJson:(NSString *)url params:(NSDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure;
-//getJson
+
+// getJson
 + (void)getJson:(NSString *)url params:(NSDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure;
 
-
+// 获取网络状态
++ (void)ReachabilityStatus:(void (^)(id))netStatus;
 @end
