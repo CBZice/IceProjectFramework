@@ -10,13 +10,15 @@
 #import "UIImageView+WebCache.h"
 #import "UIView+Extension.h"
 
-/**
- 用于标识中间的图片是数组中的哪一个
- */
-static NSInteger indexCount;
+
 
 @interface IceCirculationView ()<UIScrollViewDelegate>
-
+{
+    /**
+     用于标识中间的图片是数组中的哪一个
+     */
+    NSInteger indexCount;
+}
 @property (nonatomic, strong) UIScrollView *myScrollView;
 
 @property (nonatomic, strong) NSMutableArray *imgNameArr;

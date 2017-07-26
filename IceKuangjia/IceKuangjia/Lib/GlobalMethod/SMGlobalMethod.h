@@ -92,5 +92,9 @@
  */
 + (void)clearCacheFromFolder:(NSString *)folderName;
 
+// 打电话
++ (void)phoneSomeone:(NSString *)phoneNum;
+// 发短信
++ (void)messageSomeone:(NSString *)phoneNum;
 
 @end

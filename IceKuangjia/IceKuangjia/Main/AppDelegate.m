@@ -7,9 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 #import "IceTabBarController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<AVSpeechSynthesizerDelegate>{
+    AVSpeechSynthesizer*av;
+}
 
 @end
 
@@ -25,6 +28,57 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+
+#pragma mark - 语音播报
+- (void)start:(NSString *)str {
+    if([av isPaused]) {
+        //如果暂停则恢复，会从暂停的地方继续
+        [av continueSpeaking];
+    }else{
+        //初始化对象
+        av= [[AVSpeechSynthesizer alloc]init];
+        av.delegate=self;//挂上代理
+        
+        AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:str];//需要转换的文字
+        utterance.rate = 0.5;// 设置语速，范围0-1，注意0最慢，1最快；AVSpeechUtteranceMinimumSpeechRate最慢，AVSpeechUtteranceMaximumSpeechRate最快
+        AVSpeechSynthesisVoice *voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"zh-CN"];//设置发音，这是中文普通话
+        utterance.voice= voice;
+        [av speakUtterance:utterance];//开始
+    }
+}
+
+// 获取更新信息
+-(void)hsUpdateApp
+{
+    
+    NSDictionary *infoDic=[[NSBundle mainBundle] infoDictionary];
+    NSString *currentVersion=infoDic[@"CFBundleShortVersionString"];
+    
+    dispatch_queue_t dispatchQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(dispatchQueue, ^{
+        NSData *response = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://itunes.apple.com/cn/lookup?id=1190835723"]] returningResponse:nil error:nil];
+        if (response == nil) {
+            return ;
+        }
+        NSDictionary *appInfoDic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableLeaves error:nil];
+        NSArray *array = appInfoDic[@"results"];
+        NSDictionary *dic = array[0];
+        NSString *appStoreVersion = dic[@"version"];
+        
+        NSString * currStr = [currentVersion stringByReplacingOccurrencesOfString:@"." withString:@""];
+        NSString * appStr = [appStoreVersion stringByReplacingOccurrencesOfString:@"." withString:@""];
+        
+        if([currStr intValue] < [appStr intValue])
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"版本有更新" message:[NSString stringWithFormat:@"检测到新版本(%@),是否更新?",appStoreVersion] delegate:self cancelButtonTitle:@"暂不更新"otherButtonTitles:@"前往更新",nil];
+            [alert show];
+        }else{
+            
+        }
+    });
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

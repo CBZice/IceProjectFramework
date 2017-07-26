@@ -38,8 +38,6 @@ static EPGetAddress *address1;
 
 -(void)getAddress:(getAddressBlock)address {
     _block = address;
-
-//    [self locationMethod];
     [self initLocation];
 }
 
@@ -116,65 +114,16 @@ static EPGetAddress *address1;
     _block(nil,0,0);
 }
 
-
-
-#pragma mark - 获取定位信息
-- (void)locationMethod {
-    if ([CLLocationManager locationServicesEnabled] && [CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied) {
-        //定位功能可用，开始定位
-        self.locationManager = [[CLLocationManager alloc] init];
-        self.locationManager.delegate = self;
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        [self findMe];
-    } else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied){
-        UIAlertView *tipSettingMessage=[[UIAlertView alloc] initWithTitle:@"定位服务已关闭" message:kCLMessage_AppDenied delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
-        [tipSettingMessage show];
-        return;
-    }
-}
-- (void)findMe {
-    /** 由于IOS8中定位的授权机制改变 需要进行手动授权
-     * 获取授权认证，两个方法：
-     * [self.locationManager requestWhenInUseAuthorization];
-     * [self.locationManager requestAlwaysAuthorization];
-     */
-    if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
-        [self.locationManager requestAlwaysAuthorization];
-    }
-    
-    //开始定位，不断调用其代理方法
-    [self.locationManager startUpdatingLocation];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    // 1.获取用户位置的对象
-    CLLocation *location = [locations lastObject];
-    CLLocationCoordinate2D coordinate = location.coordinate;
-    
-//    latitude = [NSString stringWithFormat:@"%f", coordinate.latitude];
-//    longitude= [NSString stringWithFormat:@"%f", coordinate.longitude];
-    
-    CLLocation *c = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-    //创建位置 ￼反向地理编码
-    CLGeocoder *revGeo = [[CLGeocoder alloc] init];
-    
-    [revGeo reverseGeocodeLocation:c completionHandler:^(NSArray *placemarks, NSError *error) {
-        if (error||placemarks.count==0) {
-        } else {//编码成功
-            //显示最前面的地标信息
-            CLPlacemark *firstPlacemark = [placemarks firstObject];
-//            _updateEquipView.locationLabel.text = firstPlacemark.name;
-//            commercialAdress = firstPlacemark.name;
-            if (_block) {
-                _block(firstPlacemark.name, coordinate.longitude, coordinate.latitude);
-            }
+// 获取当前主控制器
+- (UIViewController *)viewController
+{
+    for (UIView* next = [_mapView superview]; next; next = next.superview) {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
         }
-    }];
-    [self.locationManager stopUpdatingLocation];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-    _block(nil,0,0);
+    }
+    return nil;
 }
 
 @end

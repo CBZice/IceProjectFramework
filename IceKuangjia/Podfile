@@ -4,5 +4,9 @@ target 'IceKuangjia’ do
 pod 'SVProgressHUD'
 pod 'SDWebImage'
 pod 'AFNetworking'
+pod 'Masonry'
+pod 'MJRefresh'
+#pod 'IQKeyboardManager'
+pod 'YYKit'
 end
 

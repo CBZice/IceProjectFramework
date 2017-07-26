@@ -439,4 +439,20 @@
     }
 }
 
++ (void)phoneSomeone:(NSString *)phoneNum {
+//    NSString *url=[NSString stringWithFormat:@"telprompt://%@",phoneNum];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+    NSMutableString* str=[[NSMutableString alloc]initWithFormat:@"tel:%@",phoneNum];
+    UIWebView* callWebview = [[UIWebView alloc]init];
+    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+}
+
++ (void)messageSomeone:phoneNum {
+//    NSString *url=[NSString stringWithFormat:@"sms://%@",phoneNum];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+    NSMutableString* str=[[NSMutableString alloc]initWithFormat:@"sms:%@",phoneNum];
+    UIWebView* callWebview = [[UIWebView alloc]init];
+    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+}
+
 @end
