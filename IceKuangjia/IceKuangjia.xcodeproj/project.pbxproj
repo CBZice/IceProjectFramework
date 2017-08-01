@@ -38,6 +38,11 @@
 		C63B4EED1ED7DB3D00436190 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EE51ED7DB3D00436190 /* 6.jpg */; };
 		C63B4EEE1ED7DB3D00436190 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C63B4EE61ED7DB3D00436190 /* 7.jpg */; };
 		C6425AA91F20934A00A36A68 /* EPGetAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = C6425AA81F20934A00A36A68 /* EPGetAddress.m */; };
+		C650AC3C1F2F0BC800D4E8BC /* QRCodeRectViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C650AC351F2F0BC800D4E8BC /* QRCodeRectViewVC.m */; };
+		C650AC3D1F2F0BC800D4E8BC /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = C650AC371F2F0BC800D4E8BC /* VideoDeviceAuthorization.m */; };
+		C650AC3E1F2F0BC800D4E8BC /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C650AC391F2F0BC800D4E8BC /* QRCodeView.m */; };
+		C650AC3F1F2F0BC800D4E8BC /* CutOutClearView.m in Sources */ = {isa = PBXBuildFile; fileRef = C650AC3B1F2F0BC800D4E8BC /* CutOutClearView.m */; };
+		C6777DEE1F29CC8D00093A37 /* IceCutScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = C6777DED1F29CC8D00093A37 /* IceCutScreen.m */; };
 		C68C40F21F28939100FFF310 /* WBStatusHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C68C40E71F28939100FFF310 /* WBStatusHelper.m */; };
 		C68C40F31F28939100FFF310 /* WBEmoticonInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68C40E91F28939100FFF310 /* WBEmoticonInputView.m */; };
 		C68C40F41F28939100FFF310 /* WBStatusComposeTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C68C40EB1F28939100FFF310 /* WBStatusComposeTextParser.m */; };
@@ -75,6 +80,7 @@
 		C68C41331F2893EF00FFF310 /* ermilio.gif in Resources */ = {isa = PBXBuildFile; fileRef = C68C41151F2893EF00FFF310 /* ermilio.gif */; };
 		C68C41341F2893EF00FFF310 /* ermilio.png in Resources */ = {isa = PBXBuildFile; fileRef = C68C41161F2893EF00FFF310 /* ermilio.png */; };
 		C6A765401EF1245C0042A0C5 /* HWHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A7653F1EF1245C0042A0C5 /* HWHttpTool.m */; };
+		C6D1BD641F3031D700C38072 /* GetPhotoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D1BD631F3031D700C38072 /* GetPhotoToolBar.m */; };
 		DF6337828AE8C1FE6B82F1DB /* Pods_IceKuangjia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F55777BB5A588A099A118E /* Pods_IceKuangjia.framework */; };
 /* End PBXBuildFile section */
 
@@ -156,6 +162,16 @@
 		C6425AA81F20934A00A36A68 /* EPGetAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPGetAddress.m; sourceTree = "<group>"; };
 		C6425AAA1F20962D00A36A68 /* AlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
 		C6425AAB1F2096C000A36A68 /* ColorHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
+		C650AC341F2F0BC800D4E8BC /* QRCodeRectViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeRectViewVC.h; sourceTree = "<group>"; };
+		C650AC351F2F0BC800D4E8BC /* QRCodeRectViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeRectViewVC.m; sourceTree = "<group>"; };
+		C650AC361F2F0BC800D4E8BC /* VideoDeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDeviceAuthorization.h; sourceTree = "<group>"; };
+		C650AC371F2F0BC800D4E8BC /* VideoDeviceAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDeviceAuthorization.m; sourceTree = "<group>"; };
+		C650AC381F2F0BC800D4E8BC /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
+		C650AC391F2F0BC800D4E8BC /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
+		C650AC3A1F2F0BC800D4E8BC /* CutOutClearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutOutClearView.h; sourceTree = "<group>"; };
+		C650AC3B1F2F0BC800D4E8BC /* CutOutClearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutOutClearView.m; sourceTree = "<group>"; };
+		C6777DEC1F29CC8D00093A37 /* IceCutScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceCutScreen.h; sourceTree = "<group>"; };
+		C6777DED1F29CC8D00093A37 /* IceCutScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceCutScreen.m; sourceTree = "<group>"; };
 		C68C40E61F28939100FFF310 /* WBStatusHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusHelper.h; sourceTree = "<group>"; };
 		C68C40E71F28939100FFF310 /* WBStatusHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusHelper.m; sourceTree = "<group>"; };
 		C68C40E81F28939100FFF310 /* WBEmoticonInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBEmoticonInputView.h; sourceTree = "<group>"; };
@@ -201,6 +217,8 @@
 		C68C41361F28967500FFF310 /* IceCirculationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceCirculationView.h; sourceTree = "<group>"; };
 		C6A7653E1EF1245C0042A0C5 /* HWHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWHttpTool.h; sourceTree = "<group>"; };
 		C6A7653F1EF1245C0042A0C5 /* HWHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWHttpTool.m; sourceTree = "<group>"; };
+		C6D1BD621F3031D700C38072 /* GetPhotoToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPhotoToolBar.h; sourceTree = "<group>"; };
+		C6D1BD631F3031D700C38072 /* GetPhotoToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPhotoToolBar.m; sourceTree = "<group>"; };
 		DC360926EA2437532B4A4212 /* Pods-IceKuangjia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceKuangjia.release.xcconfig"; path = "Pods/Target Support Files/Pods-IceKuangjia/Pods-IceKuangjia.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,6 +282,11 @@
 		A049004F1D5490AB009E4CCC /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C6D1BD621F3031D700C38072 /* GetPhotoToolBar.h */,
+				C6D1BD631F3031D700C38072 /* GetPhotoToolBar.m */,
+				C650AC331F2F0BC000D4E8BC /* QRCode */,
+				C6777DEC1F29CC8D00093A37 /* IceCutScreen.h */,
+				C6777DED1F29CC8D00093A37 /* IceCutScreen.m */,
 				C68C40E51F28938900FFF310 /* keyboard */,
 				C6425AA71F20934A00A36A68 /* EPGetAddress.h */,
 				C6425AA81F20934A00A36A68 /* EPGetAddress.m */,
@@ -387,6 +410,21 @@
 				DC360926EA2437532B4A4212 /* Pods-IceKuangjia.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C650AC331F2F0BC000D4E8BC /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				C650AC341F2F0BC800D4E8BC /* QRCodeRectViewVC.h */,
+				C650AC351F2F0BC800D4E8BC /* QRCodeRectViewVC.m */,
+				C650AC361F2F0BC800D4E8BC /* VideoDeviceAuthorization.h */,
+				C650AC371F2F0BC800D4E8BC /* VideoDeviceAuthorization.m */,
+				C650AC381F2F0BC800D4E8BC /* QRCodeView.h */,
+				C650AC391F2F0BC800D4E8BC /* QRCodeView.m */,
+				C650AC3A1F2F0BC800D4E8BC /* CutOutClearView.h */,
+				C650AC3B1F2F0BC800D4E8BC /* CutOutClearView.m */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		C68C40E51F28938900FFF310 /* keyboard */ = {
@@ -684,13 +722,19 @@
 				A049000C1D547068009E4CCC /* SecondViewController.m in Sources */,
 				C68C40F31F28939100FFF310 /* WBEmoticonInputView.m in Sources */,
 				A0DC53611D6FDE33000CE11B /* IceCirculationView.m in Sources */,
+				C650AC3E1F2F0BC800D4E8BC /* QRCodeView.m in Sources */,
 				A049002E1D548F07009E4CCC /* IceNavigationController.m in Sources */,
+				C650AC3F1F2F0BC800D4E8BC /* CutOutClearView.m in Sources */,
 				A049001C1D548097009E4CCC /* ForthViewController.m in Sources */,
 				C68C40F51F28939100FFF310 /* WBModel.m in Sources */,
 				A04900381D548F0E009E4CCC /* main.m in Sources */,
+				C6D1BD641F3031D700C38072 /* GetPhotoToolBar.m in Sources */,
+				C6777DEE1F29CC8D00093A37 /* IceCutScreen.m in Sources */,
 				A04900521D5490AB009E4CCC /* UIView+Extension.m in Sources */,
 				C68C40F21F28939100FFF310 /* WBStatusHelper.m in Sources */,
+				C650AC3C1F2F0BC800D4E8BC /* QRCodeRectViewVC.m in Sources */,
 				A049000F1D54706F009E4CCC /* ThirdViewController.m in Sources */,
+				C650AC3D1F2F0BC800D4E8BC /* VideoDeviceAuthorization.m in Sources */,
 				A04900311D548F07009E4CCC /* IceTableViewController.m in Sources */,
 				A04900091D54705A009E4CCC /* FirstViewController.m in Sources */,
 			);
@@ -837,6 +881,7 @@
 				DEVELOPMENT_TEAM = R24LQUDUMQ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IceKuangjia/PrefixHeader.pch";
 				INFOPLIST_FILE = IceKuangjia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ice.IceKuangjia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -851,6 +896,7 @@
 				DEVELOPMENT_TEAM = R24LQUDUMQ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IceKuangjia/PrefixHeader.pch";
 				INFOPLIST_FILE = IceKuangjia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ice.IceKuangjia;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,8 +7,11 @@
 //
 
 #import "ForthViewController.h"
+#import "GetPhotoToolBar.h"
 
-@interface ForthViewController ()
+@interface ForthViewController ()<GetPhotoToolBarDelegate>
+
+@property (nonatomic, strong) UIImageView *imgView;
 
 @end
 
@@ -17,11 +20,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _imgView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    _imgView.center = self.view.center;
+    [self.view addSubview:_imgView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [GetPhotoToolBar setPhotoDelegate:self getPhotoBlcok:^(UIImage *image) {
+        _imgView.image = image;
+    }];
 }
 
 /*

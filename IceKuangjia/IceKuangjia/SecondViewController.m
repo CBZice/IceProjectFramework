@@ -7,8 +7,8 @@
 //
 
 #import "SecondViewController.h"
-
 #import "SLUChatToolBar.h"
+#import "QRCodeRectViewVC.h"
 
 @interface SecondViewController ()
 
@@ -28,6 +28,10 @@
 //    [toolBar show];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    QRCodeRectViewVC *qrCodeVC = [QRCodeRectViewVC new];
+    [self.navigationController pushViewController:qrCodeVC animated:YES];
+}
 
 /*
 #pragma mark - Navigation

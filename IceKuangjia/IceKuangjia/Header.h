@@ -24,6 +24,9 @@
 #define NSLog(...) {}
 #endif
 
+#define CurrectVerion  (NSDictionary *infoDic=[[NSBundle mainBundle] infoDictionary];\
+                        return infoDic[@"CFBundleShortVersionString"];)
+
 
 
 #endif /* Header_h */
