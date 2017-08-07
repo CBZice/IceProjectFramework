@@ -8,6 +8,9 @@
 
 #import "SMGlobalMethod.h"
 #import <UIKit/UIKit.h>
+#import "KeyChainStore.h"
+
+#define KEY_USERNAME_PASSWORD  @"KEY_USERNAME_PASSWORD"
 
 #define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -441,7 +444,7 @@
 
 + (void)phoneSomeone:(NSString *)phoneNum {
 //    NSString *url=[NSString stringWithFormat:@"telprompt://%@",phoneNum];
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];严谨
     NSMutableString* str=[[NSMutableString alloc]initWithFormat:@"tel:%@",phoneNum];
     UIWebView* callWebview = [[UIWebView alloc]init];
     [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
@@ -453,6 +456,19 @@
     NSMutableString* str=[[NSMutableString alloc]initWithFormat:@"sms:%@",phoneNum];
     UIWebView* callWebview = [[UIWebView alloc]init];
     [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+}
+
++ (NSString *)getUUID {
+    NSString *strUUID = [KeyChainStore load:@"your_app_bundleID"];
+    //首次执行该方法时，uuid为空
+    if ([strUUID isEqualToString:@""] || !strUUID) {
+        //生成一个uuid的方法
+        CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
+        strUUID = (NSString *)CFBridgingRelease(CFUUIDCreateString (kCFAllocatorDefault,uuidRef));
+        //将该uuid保存到keychain
+        [KeyChainStore save:KEY_USERNAME_PASSWORD data:strUUID];
+    }
+    return strUUID;
 }
 
 @end

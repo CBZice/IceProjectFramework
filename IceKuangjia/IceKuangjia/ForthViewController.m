@@ -8,6 +8,7 @@
 
 #import "ForthViewController.h"
 #import "GetPhotoToolBar.h"
+#import "IceTextView.h"
 
 @interface ForthViewController ()<GetPhotoToolBarDelegate>
 
@@ -20,14 +21,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     _imgView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     _imgView.center = self.view.center;
     [self.view addSubview:_imgView];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    IceTextView *textView = [[IceTextView alloc] initWithFrame:CGRectMake(0, 80, WIDTH, 200)];
+    textView.backgroundColor = [UIColor whiteColor];
+    textView.textColor = [UIColor blackColor];
+    textView.placeHolder = @"这只是个测试";
+    [self.view addSubview:textView];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

@@ -97,4 +97,7 @@
 // 发短信
 + (void)messageSomeone:(NSString *)phoneNum;
 
++(NSString *)getUUID;
+
+
 @end

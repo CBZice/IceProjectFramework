@@ -16,6 +16,7 @@ UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertA
 [alertController addAction:otherAction];\
 [self presentViewController:alertController animated:YES completion:nil];}
 
-#define AlertView(title, message, ...)  { UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:fmt, ##__VA_ARGS__] message:[NSString stringWithFormat:fft, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show]; }
+#define AlertView(title, message, ...)  { UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:mesage delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];\
+[alertView show];}
 
 #endif /* AlertView_h */
