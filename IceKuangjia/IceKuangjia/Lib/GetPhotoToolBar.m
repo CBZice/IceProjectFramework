@@ -38,7 +38,11 @@ static GetPhotoToolBar *photoToolBar;
 
 - (void)openShopVoewSelectedPhoto {
     if (_delegate) {
-        _vc = (UIViewController *)_delegate;
+        if ([_delegate isKindOfClass:[UIView class]]) {
+            _vc = [self viewController:(UIView *)_delegate];
+        } else {
+            _vc = (UIViewController *)_delegate;
+        }
     }else {
         return;
     }
@@ -92,6 +96,15 @@ static GetPhotoToolBar *photoToolBar;
     if (photoToolBar.block) {
         photoToolBar.block(img);
     }
+}
+- (UIViewController *)viewController:(UIView *)view {
+    for (UIView* next = [view superview]; next; next = next.superview) {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
 }
 
 - (void)dealloc {
