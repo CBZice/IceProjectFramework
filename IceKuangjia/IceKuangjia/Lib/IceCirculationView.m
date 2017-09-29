@@ -42,6 +42,10 @@
 
 -(instancetype)initWithFrame:(CGRect)frame Images:(NSArray *)imageArr{
     if (self = [super initWithFrame:frame]) {
+
+        if (imageArr.count == 0) {
+            return self;
+        }
         
         indexCount = 0;
         
