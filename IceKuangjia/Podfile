@@ -8,5 +8,6 @@ pod 'Masonry'
 pod 'MJRefresh'
 #pod 'IQKeyboardManager'
 pod 'YYKit'
+pod 'MJExtension'
 end
 

@@ -32,7 +32,7 @@
 @property (nonatomic, assign) BOOL isTimer;
 
 /**
-在前一次移动未执行完之前，不进行第二次 indexCount++ 操作
+ 在前一次移动未执行完之前，不进行第二次 indexCount++ 操作
  */
 @property (nonatomic, assign) BOOL shouldStop;
 
@@ -42,10 +42,6 @@
 
 -(instancetype)initWithFrame:(CGRect)frame Images:(NSArray *)imageArr{
     if (self = [super initWithFrame:frame]) {
-
-        if (imageArr.count == 0) {
-            return self;
-        }
         
         indexCount = 0;
         
@@ -57,39 +53,40 @@
         
         // 在滚动视图上添加三个 imgView
         [self createCirculationViewWithimgArr:imageArr];
+        _imagesArr = [NSMutableArray arrayWithArray:imageArr];
         
         // 在 imgView 上添加 image
         [self setScrollViewContentOffSetWithScrollView:_myScrollView];
         
         [self startTimer];
-
+        
     }
     return self;
 }
 
 //初始化滑动控件
 - (void)setScrollViewWithFrame:(CGRect)frame{
-    _myScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.width, frame.size.height)];
-    _myScrollView.width = self.width;
+    _myScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.mj_w, frame.size.height)];
+    _myScrollView.mj_w = self.mj_w;
     _myScrollView.delegate = self;
     _myScrollView.pagingEnabled = YES;
     _myScrollView.showsHorizontalScrollIndicator = NO;
     _myScrollView.showsVerticalScrollIndicator = NO;
-    [_myScrollView setContentOffset:CGPointMake(self.width, 0) animated:NO];
+    [_myScrollView setContentOffset:CGPointMake(self.mj_w, 0) animated:NO];
     [self addSubview:_myScrollView];
 }
 
 //加载滑动视图上的图片
 - (void)createCirculationViewWithimgArr:(NSArray *)imgArr{
     _imgNameArr = [NSMutableArray arrayWithArray:imgArr];
-    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.height - 10, self.width, 0)];
+    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.mj_h - 10, self.mj_w, 0)];
     _pageControl.numberOfPages = imgArr.count;
     [self addSubview:_pageControl];
     
     NSInteger imgCount = 3;
     
     for (int i = 0; i < imgCount; i++) {
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(i * self.width, 0, self.width, _myScrollView.height)];
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(i * self.mj_w, 0, self.mj_w, _myScrollView.mj_h)];
         [_imgViewArr addObject:imgView];
         [_myScrollView addSubview:imgView];
         
@@ -100,7 +97,8 @@
             imgView.userInteractionEnabled = YES;
         }
     }
-    _myScrollView.contentSize = CGSizeMake(self.width * imgCount, _myScrollView.height);
+    _myScrollView.backgroundColor = BackGroundColor;
+    _myScrollView.contentSize = CGSizeMake(self.mj_w * imgCount, _myScrollView.mj_h);
 }
 - (void)changgePage{
     _isTimer = YES;
@@ -111,7 +109,7 @@
     }
     _pageControl.currentPage = indexCount;
     [UIView animateWithDuration:.5 animations:^{
-        _myScrollView.contentOffset = CGPointMake(self.width * 2, 0);
+        _myScrollView.contentOffset = CGPointMake(self.mj_w * 2, 0);
     } completion:^(BOOL finished) {
         [self setScrollViewContentOffSetWithScrollView:_myScrollView];
     }];
@@ -130,7 +128,7 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (_isTimer || _shouldStop)return;
-    if (scrollView.contentOffset.x >= self.width*2) {
+    if (scrollView.contentOffset.x >= self.mj_w*2) {
         indexCount ++;
         if (indexCount == _imgNameArr.count) {
             indexCount = 0;
@@ -153,7 +151,7 @@
 
 - (void)setScrollViewContentOffSetWithScrollView:(UIScrollView *)scrollView
 {
-    [scrollView setContentOffset:CGPointMake(self.width, 0)];
+    [scrollView setContentOffset:CGPointMake(self.mj_w, 0)];
     NSInteger totalCount = _imgNameArr.count;
     NSInteger afterIndex;
     NSInteger laterIndex;
@@ -173,23 +171,23 @@
         NSString *str = nil;
         switch (i) {
             case 0:
-                str = _imgNameArr[afterIndex];
-                break;
+            str = _imgNameArr[afterIndex];
+            break;
             case 1:
-                str = _imgNameArr[indexCount];
-                break;
+            str = _imgNameArr[indexCount];
+            break;
             case 2:
-                str = _imgNameArr[laterIndex];
-                break;
-                
+            str = _imgNameArr[laterIndex];
+            break;
+            
             default:
-                break;
+            break;
         }
         
-        UIImage *placeImg = self.placeHolder.length != 0 ? [UIImage imageNamed:self.placeHolder]:nil;
+        //        UIImage *placeImg = self.placeHolder.length != 0 ? [UIImage imageNamed:self.placeHolder]:nil;
         
         if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:str]]) {
-            [imgView sd_setImageWithURL:[NSURL URLWithString:str] placeholderImage:placeImg];
+            [imgView sd_setImageWithURL:[NSURL URLWithString:str] placeholderImage:[UIImage imageNamed:@"bannerPlaceHolder.jpg"]];
         }else{
             imgView.image = [UIImage imageNamed:str];
         }
@@ -210,6 +208,10 @@
 - (void)startTimer{
     
     if (_timer) [self stopTimer];
+    if (_imagesArr.count <= 1) {
+        _myScrollView.scrollEnabled = NO;
+        return;
+    }
     
     CGFloat duraion = self.animationDelay == 0 ? 2 : self.animationDelay;
     
