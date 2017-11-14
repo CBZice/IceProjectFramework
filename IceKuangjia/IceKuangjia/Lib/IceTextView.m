@@ -7,6 +7,7 @@
 //
 
 #import "IceTextView.h"
+#import "UIView+Extension.h"
 
 @interface IceTextView()
 

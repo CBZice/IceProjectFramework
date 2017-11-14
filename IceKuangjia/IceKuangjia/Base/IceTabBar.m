@@ -7,6 +7,7 @@
 //
 
 #import "IceTabBar.h"
+#import "UIView+Extension.h"
 
 @interface IceTabBar()
 
@@ -55,8 +56,8 @@
     [super layoutSubviews];
     
     // 1.设置加号按钮的位置
-    self.plusBtn.centerX = self.width*0.5;
-    self.plusBtn.centerY = self.height*0.5;
+    self.plusBtn.ice_centerX = self.width*0.5;
+    self.plusBtn.ice_centerY = self.height*0.5;
     NSLog(@"%@",NSStringFromCGRect(self.plusBtn.frame));
     
     // 2.设置其他tabbarButton的frame

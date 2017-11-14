@@ -16,8 +16,8 @@
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGPoint origin;
-@property (nonatomic, assign) CGFloat centerX;
-@property (nonatomic, assign) CGFloat centerY;
+@property (nonatomic, assign) CGFloat ice_centerX;
+@property (nonatomic, assign) CGFloat ice_centerY;
 
 @end
 

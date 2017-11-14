@@ -7,6 +7,7 @@
 //
 
 #import "SLUChatToolBar.h"
+#import "UIView+Extension.h"
 
 #define ToolBarHeight       60
 #define ToolBarWigth        140
@@ -39,7 +40,7 @@
 - (void)addView{
     
     _imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ToolBarWigth, ToolBarHeight)];
-    _imgView.centerX = _supRect.origin.x + _supRect.size.width / 2.0;
+    _imgView.ice_centerX = _supRect.origin.x + _supRect.size.width / 2.0;
     _imgView.y = _supRect.origin.y - ToolBarHeight;
     _imgView.image = [UIImage imageNamed:@"多边形-1"];
     _imgView.userInteractionEnabled = YES;
