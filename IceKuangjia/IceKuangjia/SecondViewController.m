@@ -8,7 +8,7 @@
 
 #import "SecondViewController.h"
 #import "SLUChatToolBar.h"
-//#import "QRCodeRectViewVC.h"
+#import "QRCodeRectViewVC.h"
 
 @interface SecondViewController ()
 

@@ -11,9 +11,7 @@
 #import "IceNavigationController.h"
 #import "IceCirculationView.h"
 #import "ShowPhotoVC.h"
-#import "SMGlobalMethod.h"
-#import <CommonCrypto/CommonDigest.h>
-#import "FSAES128.h"
+
 
 @interface FirstViewController ()<IceCirculationViewDelegate>
 
@@ -72,16 +70,6 @@
             [signStr appendString:key];
         }
     }
-    NSLog(@"%@", [SMGlobalMethod md5:signStr]);
-    params[@"sign"] = [SMGlobalMethod md5:signStr];
-    NSData *jsonData2 = [NSJSONSerialization dataWithJSONObject:params options:NSJSONWritingPrettyPrinted error:nil];
-    NSString *jsonString2 = [[NSString alloc]initWithData:jsonData2 encoding:NSUTF8StringEncoding];
-    jsonString2 = [jsonString2 stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    jsonString2 = [jsonString2 stringByReplacingOccurrencesOfString:@" " withString:@""];
-    NSString *charactersToEscape2 = @"?!@#$^&%*+,:;='\"`<>()[]{}/\\| ";
-    NSCharacterSet *allowedCharacters2 = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape2] invertedSet];
-    jsonString2 = [jsonString2 stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters2];
-    NSLog(@"%@", [FSAES128 AES128EncryptStrig:jsonString2]);
 }
 
 - (NSString *)dictionaryToJson:(NSDictionary *)dic{
@@ -101,34 +89,6 @@
     [self.navigationController pushViewController:[SecondViewController new] animated:YES];
     
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(void)b1:(NSString *)jsonData {
-    NSString *name1=jsonData;
-    NSData *data1= [name1 dataUsingEncoding:NSUTF8StringEncoding];
-    Byte *prehix=(Byte *)[data1 bytes];
-//    for(int i=0;i<6;i++)
-//        t1[100+i]=prehix;
-    unsigned char digest[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(prehix, [data1 length], digest);//md5  jiami
-    NSMutableString *tmp3= [[NSMutableString alloc]init];
-    for(int i=0;i<16;i++)
-    {
-        NSString *tmp2=[NSString stringWithFormat:(@"%02X"),digest];
-        [tmp3 appendFormat:@"%@",tmp2];
-    }
-    NSLog(@"md5_16 data  is  %@",tmp3);
-    
-    NSData * data2= [tmp3 dataUsingEncoding:NSUTF8StringEncoding];//zhuan wei 32 wei
-    Byte * md5_32=(Byte *)[data2 bytes];
-    NSMutableString *tmp4=[[NSMutableString alloc] init];
-    for(int k=0;k<32;k++)
-    {
-        NSString *tmp2=[NSString stringWithFormat:(@"%02X"),md5_32[k]];
-        [tmp4 appendFormat:@"%@",tmp2];
-    }
-    NSLog(@"md5_32 data  is  %@",tmp4);
-
 }
 -(void)iceCirculationView:(IceCirculationView *)iceCirculationView whichPicureBeChanged:(NSInteger)index{
     NSLog(@"%ld", (long)index);
