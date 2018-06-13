@@ -8,7 +8,7 @@
 
 #import "SecondViewController.h"
 #import "SLUChatToolBar.h"
-#import "QRCodeRectViewVC.h"
+//#import "QRCodeRectViewVC.h"
 
 @interface SecondViewController ()
 
@@ -26,6 +26,8 @@
 //    
 //    SLUChatToolBar *toolBar = [[SLUChatToolBar alloc] initWithSupView:btn];
 //    [toolBar show];
+    
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

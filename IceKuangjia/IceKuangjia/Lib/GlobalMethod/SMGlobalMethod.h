@@ -99,5 +99,7 @@
 
 +(NSString *)getUUID;
 
++ (NSString *) md5:(NSString *) input;
++ (Byte *) md5byte:(Byte *) byte;
 
 @end

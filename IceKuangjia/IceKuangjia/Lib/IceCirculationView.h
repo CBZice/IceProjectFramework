@@ -45,4 +45,6 @@
 
 @property (nonatomic, weak) id<IceCirculationViewDelegate> delegate;
 
+- (void)stopTimer;
+
 @end

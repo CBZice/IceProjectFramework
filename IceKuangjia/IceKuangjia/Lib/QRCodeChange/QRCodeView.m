@@ -59,6 +59,9 @@
     CAShapeLayer *layer = [CAShapeLayer layer];
     layer.frame = CGRectMake(45, Height - (Width - 90.f)/2.0, Width - 90.f - 40, 2);
     layer.position = self.center;
+    layer.cornerRadius = 30;
+    layer.shadowOffset = CGSizeMake(5, 5);
+    layer.shadowColor = [UIColor orangeColor].CGColor;
     layer.backgroundColor = [UIColor redColor].CGColor;
     
 //    layer.shadowColor = [UIColor redColor].CGColor;
@@ -141,7 +144,16 @@
     
     // 创建queue.
     [self.captureMetadataOutput setMetadataObjectsDelegate:self queue:dispatch_queue_create(nil, nil)];
-    self.captureMetadataOutput.metadataObjectTypes = @[AVMetadataObjectTypeQRCode];
+    self.captureMetadataOutput.metadataObjectTypes = @[AVMetadataObjectTypeQRCode,
+                                                       AVMetadataObjectTypeEAN13Code,
+                                                       AVMetadataObjectTypeEAN8Code,
+                                                       AVMetadataObjectTypeUPCECode,
+                                                       AVMetadataObjectTypeCode39Code,
+                                                       AVMetadataObjectTypeCode39Mod43Code,
+                                                       AVMetadataObjectTypeCode93Code,
+                                                       AVMetadataObjectTypeCode128Code,
+                                                       AVMetadataObjectTypePDF417Code
+                                                       ];
     
     // 创建输出对象
     self.videoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.captureSession];
@@ -174,15 +186,15 @@
         AVMetadataMachineReadableCodeObject *metadata = metadataObjects.firstObject;
         NSString                            *result   = nil;
         
-        if ([metadata.type isEqualToString:AVMetadataObjectTypeQRCode]) {
-            
+//        if ([metadata.type isEqualToString:AVMetadataObjectTypeQRCode]) {
+        
             result = metadata.stringValue;
             
             if (_delegate && [_delegate respondsToSelector:@selector(QRCodeView:codeString:)]) {
                 
                 [_delegate QRCodeView:self codeString:result];
             }
-        }
+//        }
     }
 }
 

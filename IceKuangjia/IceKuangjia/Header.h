@@ -16,6 +16,10 @@
 //屏幕高
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 
+#define isIphoneX           ((int)[[UIApplication sharedApplication] statusBarFrame].size.height) == 44 ? true : false
+#define NavHeight           ([[UIApplication sharedApplication] statusBarFrame].size.height + 44.0)
+#define TabbarHeight        ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+
 #define WeekSelf __weak typeof(self) weSelf = self;
 
 #ifndef __OPTIMIZE__

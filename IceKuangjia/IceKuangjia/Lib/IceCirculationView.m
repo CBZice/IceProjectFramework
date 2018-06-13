@@ -55,9 +55,10 @@
         [self createCirculationViewWithimgArr:imageArr];
         _imagesArr = [NSMutableArray arrayWithArray:imageArr];
         
-        // 在 imgView 上添加 image
-        [self setScrollViewContentOffSetWithScrollView:_myScrollView];
-        
+        if (imageArr.count !=0) {
+            // 在 imgView 上添加 image
+            [self setScrollViewContentOffSetWithScrollView:_myScrollView];
+        }
         [self startTimer];
         
     }
