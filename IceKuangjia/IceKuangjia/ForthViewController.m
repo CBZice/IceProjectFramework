@@ -10,7 +10,9 @@
 #import "GetPhotoToolBar.h"
 #import "IceTextView.h"
 
-@interface ForthViewController ()<GetPhotoToolBarDelegate>
+@interface ForthViewController ()<GetPhotoToolBarDelegate>{
+    IceTextView *textView;
+}
 
 @property (nonatomic, strong) UIImageView *imgView;
 
@@ -28,7 +30,7 @@
     _imgView.center = self.view.center;
     [self.view addSubview:_imgView];
     
-    IceTextView *textView = [[IceTextView alloc] initWithFrame:CGRectMake(0, 80, WIDTH, 200)];
+    textView = [[IceTextView alloc] initWithFrame:CGRectMake(0, 80, WIDTH, 200)];
     textView.backgroundColor = [UIColor whiteColor];
     textView.textColor = [UIColor blackColor];
     textView.placeHolder = @"这只是个测试";
@@ -36,6 +38,10 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if ([textView isFirstResponder]) {
+        [textView resignFirstResponder];
+        return;
+    }
     [GetPhotoToolBar setPhotoDelegate:self getPhotoBlcok:^(UIImage *image) {
         _imgView.image = image;
     }];

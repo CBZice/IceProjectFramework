@@ -9,12 +9,21 @@
 /* Begin PBXBuildFile section */
 		9E115C7B1FB9841F0002A7F4 /* JPFPSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E115C7A1FB9841E0002A7F4 /* JPFPSStatus.m */; };
 		9E115C811FB984E40002A7F4 /* UIView+EBAddMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E115C801FB984E40002A7F4 /* UIView+EBAddMessage.m */; };
+		9E18ACDE211935810048A92B /* IceTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E18ACDD211935800048A92B /* IceTextView.m */; };
+		9E18ACE3211943110048A92B /* NEUBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E18ACE0211943100048A92B /* NEUBase64.m */; };
+		9E18ACEC21198D0C0048A92B /* NSString+RXUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E18ACEB21198D0C0048A92B /* NSString+RXUtility.m */; };
+		9E18ACF121198F8E0048A92B /* NSData+NEUAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E18ACED21198F8D0048A92B /* NSData+NEUAES.m */; };
+		9E18ACF52119973E0048A92B /* AES128Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E18ACF42119973E0048A92B /* AES128Util.m */; };
 		9E657E5F20C13B9F00C64410 /* NSData+AES128.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E657E5E20C13B9F00C64410 /* NSData+AES128.m */; };
 		9E657E6220C13BE500C64410 /* FSAES128.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E657E6120C13BE500C64410 /* FSAES128.m */; };
-		9E74712620D0F56D00D28D19 /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E74712220D0F56D00D28D19 /* QRCodeView.m */; };
-		9E74712720D0F56D00D28D19 /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E74712320D0F56D00D28D19 /* VideoDeviceAuthorization.m */; };
-		9E74712820D0F56D00D28D19 /* CutOutClearView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E74712420D0F56D00D28D19 /* CutOutClearView.m */; };
-		9E74712B20D0F57600D28D19 /* QRCodeRectViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E74712920D0F57600D28D19 /* QRCodeRectViewVC.m */; };
+		9E74712E20D0F67600D28D19 /* TPLoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E74712C20D0F67500D28D19 /* TPLoanViewController.m */; };
+		9E74C3D6222CC7A600A62FBA /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E74C3D0222CC7A600A62FBA /* QRCodeView.m */; };
+		9E74C3D7222CC7A600A62FBA /* QRCodeRectViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E74C3D1222CC7A600A62FBA /* QRCodeRectViewVC.m */; };
+		9E74C3D8222CC7A600A62FBA /* VideoDeviceAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E74C3D2222CC7A600A62FBA /* VideoDeviceAuthorization.m */; };
+		9E74C3D9222CC7A600A62FBA /* CutOutClearView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E74C3D3222CC7A600A62FBA /* CutOutClearView.m */; };
+		9E9336CF244959D300926831 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9336CB244959D300926831 /* UIImage+Extension.m */; };
+		9E9336D0244959D300926831 /* IceTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9336CE244959D300926831 /* IceTextField.m */; };
+		9E9336D324495A0600926831 /* EBPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9336D224495A0600926831 /* EBPageView.m */; };
 		9EFFC64E1FB1608E00FAB094 /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFFC64D1FB1608E00FAB094 /* UIImageView+CornerRadius.m */; };
 		9EFFC6511FB19B3D00FAB094 /* EPAlertViewShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFFC64F1FB19B3C00FAB094 /* EPAlertViewShow.m */; };
 		9EFFC6541FB1A23B00FAB094 /* ShowPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFFC6531FB1A23B00FAB094 /* ShowPhotoVC.m */; };
@@ -59,7 +68,6 @@
 		C67711111F3868E6006F931E /* UINavigationBar+CJ.m in Sources */ = {isa = PBXBuildFile; fileRef = C67711071F3868E6006F931E /* UINavigationBar+CJ.m */; };
 		C67711121F3868E6006F931E /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = C67711091F3868E6006F931E /* UITabBar+badge.m */; };
 		C67711131F3868E6006F931E /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C677110B1F3868E6006F931E /* UIView+AutoLayout.m */; };
-		C67711171F386970006F931E /* IceTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C67711161F386970006F931E /* IceTextView.m */; };
 		C6777DEE1F29CC8D00093A37 /* IceCutScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = C6777DED1F29CC8D00093A37 /* IceCutScreen.m */; };
 		C68C40F21F28939100FFF310 /* WBStatusHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C68C40E71F28939100FFF310 /* WBStatusHelper.m */; };
 		C68C40F31F28939100FFF310 /* WBEmoticonInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C68C40E91F28939100FFF310 /* WBEmoticonInputView.m */; };
@@ -127,18 +135,37 @@
 		9E115C7A1FB9841E0002A7F4 /* JPFPSStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPFPSStatus.m; sourceTree = "<group>"; };
 		9E115C7F1FB984E40002A7F4 /* UIView+EBAddMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EBAddMessage.h"; sourceTree = "<group>"; };
 		9E115C801FB984E40002A7F4 /* UIView+EBAddMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EBAddMessage.m"; sourceTree = "<group>"; };
+		9E18ACDC211935800048A92B /* IceTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceTextView.h; sourceTree = "<group>"; };
+		9E18ACDD211935800048A92B /* IceTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceTextView.m; sourceTree = "<group>"; };
+		9E18ACE0211943100048A92B /* NEUBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NEUBase64.m; sourceTree = "<group>"; };
+		9E18ACE1211943100048A92B /* NEUDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEUDefines.h; sourceTree = "<group>"; };
+		9E18ACE2211943100048A92B /* NEUBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NEUBase64.h; sourceTree = "<group>"; };
+		9E18ACEA21198D0C0048A92B /* NSString+RXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RXUtility.h"; sourceTree = "<group>"; };
+		9E18ACEB21198D0C0048A92B /* NSString+RXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RXUtility.m"; sourceTree = "<group>"; };
+		9E18ACED21198F8D0048A92B /* NSData+NEUAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+NEUAES.m"; sourceTree = "<group>"; };
+		9E18ACF021198F8E0048A92B /* NSData+NEUAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+NEUAES.h"; sourceTree = "<group>"; };
+		9E18ACF32119973E0048A92B /* AES128Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AES128Util.h; sourceTree = "<group>"; };
+		9E18ACF42119973E0048A92B /* AES128Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AES128Util.m; sourceTree = "<group>"; };
 		9E657E5D20C13B9F00C64410 /* NSData+AES128.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+AES128.h"; sourceTree = "<group>"; };
 		9E657E5E20C13B9F00C64410 /* NSData+AES128.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES128.m"; sourceTree = "<group>"; };
 		9E657E6020C13BE500C64410 /* FSAES128.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAES128.h; sourceTree = "<group>"; };
 		9E657E6120C13BE500C64410 /* FSAES128.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAES128.m; sourceTree = "<group>"; };
-		9E74712020D0F56D00D28D19 /* VideoDeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDeviceAuthorization.h; sourceTree = "<group>"; };
-		9E74712120D0F56D00D28D19 /* CutOutClearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutOutClearView.h; sourceTree = "<group>"; };
-		9E74712220D0F56D00D28D19 /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
-		9E74712320D0F56D00D28D19 /* VideoDeviceAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDeviceAuthorization.m; sourceTree = "<group>"; };
-		9E74712420D0F56D00D28D19 /* CutOutClearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutOutClearView.m; sourceTree = "<group>"; };
-		9E74712520D0F56D00D28D19 /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
-		9E74712920D0F57600D28D19 /* QRCodeRectViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeRectViewVC.m; sourceTree = "<group>"; };
-		9E74712A20D0F57600D28D19 /* QRCodeRectViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeRectViewVC.h; sourceTree = "<group>"; };
+		9E74712C20D0F67500D28D19 /* TPLoanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPLoanViewController.m; sourceTree = "<group>"; };
+		9E74712D20D0F67500D28D19 /* TPLoanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPLoanViewController.h; sourceTree = "<group>"; };
+		9E74C3CE222CC7A600A62FBA /* VideoDeviceAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDeviceAuthorization.h; sourceTree = "<group>"; };
+		9E74C3CF222CC7A600A62FBA /* CutOutClearView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutOutClearView.h; sourceTree = "<group>"; };
+		9E74C3D0222CC7A600A62FBA /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
+		9E74C3D1222CC7A600A62FBA /* QRCodeRectViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeRectViewVC.m; sourceTree = "<group>"; };
+		9E74C3D2222CC7A600A62FBA /* VideoDeviceAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDeviceAuthorization.m; sourceTree = "<group>"; };
+		9E74C3D3222CC7A600A62FBA /* CutOutClearView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutOutClearView.m; sourceTree = "<group>"; };
+		9E74C3D4222CC7A600A62FBA /* QRCodeRectViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeRectViewVC.h; sourceTree = "<group>"; };
+		9E74C3D5222CC7A600A62FBA /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
+		9E9336CB244959D300926831 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		9E9336CC244959D300926831 /* IceTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceTextField.h; sourceTree = "<group>"; };
+		9E9336CD244959D300926831 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		9E9336CE244959D300926831 /* IceTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceTextField.m; sourceTree = "<group>"; };
+		9E9336D124495A0600926831 /* EBPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBPageView.h; sourceTree = "<group>"; };
+		9E9336D224495A0600926831 /* EBPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBPageView.m; sourceTree = "<group>"; };
 		9EFFC64C1FB1608E00FAB094 /* UIImageView+CornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CornerRadius.h"; sourceTree = "<group>"; };
 		9EFFC64D1FB1608E00FAB094 /* UIImageView+CornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CornerRadius.m"; sourceTree = "<group>"; };
 		9EFFC64F1FB19B3C00FAB094 /* EPAlertViewShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPAlertViewShow.m; sourceTree = "<group>"; };
@@ -223,8 +250,6 @@
 		C67711091F3868E6006F931E /* UITabBar+badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+badge.m"; sourceTree = "<group>"; };
 		C677110A1F3868E6006F931E /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
 		C677110B1F3868E6006F931E /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
-		C67711151F386970006F931E /* IceTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceTextView.h; sourceTree = "<group>"; };
-		C67711161F386970006F931E /* IceTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceTextView.m; sourceTree = "<group>"; };
 		C6777DEC1F29CC8D00093A37 /* IceCutScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IceCutScreen.h; sourceTree = "<group>"; };
 		C6777DED1F29CC8D00093A37 /* IceCutScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IceCutScreen.m; sourceTree = "<group>"; };
 		C68C40E61F28939100FFF310 /* WBStatusHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusHelper.h; sourceTree = "<group>"; };
@@ -305,6 +330,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E18ACDF211943100048A92B /* NEUBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				9E18ACE0211943100048A92B /* NEUBase64.m */,
+				9E18ACE1211943100048A92B /* NEUDefines.h */,
+				9E18ACE2211943100048A92B /* NEUBase64.h */,
+			);
+			path = NEUBase64;
+			sourceTree = "<group>";
+		};
 		9E657E5C20C13B7300C64410 /* AES */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,17 +351,17 @@
 			path = AES;
 			sourceTree = "<group>";
 		};
-		9E74711F20D0F56D00D28D19 /* QRCodeChange */ = {
+		9E74C3CD222CC7A600A62FBA /* QRCodeChange */ = {
 			isa = PBXGroup;
 			children = (
-				9E74712A20D0F57600D28D19 /* QRCodeRectViewVC.h */,
-				9E74712920D0F57600D28D19 /* QRCodeRectViewVC.m */,
-				9E74712020D0F56D00D28D19 /* VideoDeviceAuthorization.h */,
-				9E74712120D0F56D00D28D19 /* CutOutClearView.h */,
-				9E74712220D0F56D00D28D19 /* QRCodeView.m */,
-				9E74712320D0F56D00D28D19 /* VideoDeviceAuthorization.m */,
-				9E74712420D0F56D00D28D19 /* CutOutClearView.m */,
-				9E74712520D0F56D00D28D19 /* QRCodeView.h */,
+				9E74C3CE222CC7A600A62FBA /* VideoDeviceAuthorization.h */,
+				9E74C3CF222CC7A600A62FBA /* CutOutClearView.h */,
+				9E74C3D0222CC7A600A62FBA /* QRCodeView.m */,
+				9E74C3D1222CC7A600A62FBA /* QRCodeRectViewVC.m */,
+				9E74C3D2222CC7A600A62FBA /* VideoDeviceAuthorization.m */,
+				9E74C3D3222CC7A600A62FBA /* CutOutClearView.m */,
+				9E74C3D4222CC7A600A62FBA /* QRCodeRectViewVC.h */,
+				9E74C3D5222CC7A600A62FBA /* QRCodeView.h */,
 			);
 			path = QRCodeChange;
 			sourceTree = "<group>";
@@ -365,7 +400,11 @@
 		A049004F1D5490AB009E4CCC /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				9E74711F20D0F56D00D28D19 /* QRCodeChange */,
+				9E74C3CD222CC7A600A62FBA /* QRCodeChange */,
+				9E18ACDC211935800048A92B /* IceTextView.h */,
+				9E18ACDD211935800048A92B /* IceTextView.m */,
+				9E74712D20D0F67500D28D19 /* TPLoanViewController.h */,
+				9E74712C20D0F67500D28D19 /* TPLoanViewController.m */,
 				9E657E5C20C13B7300C64410 /* AES */,
 				9E115C791FB9841E0002A7F4 /* JPFPSStatus.h */,
 				9E115C7A1FB9841E0002A7F4 /* JPFPSStatus.m */,
@@ -385,6 +424,12 @@
 				9EFFC64F1FB19B3C00FAB094 /* EPAlertViewShow.m */,
 				A049005A1D549729009E4CCC /* SLUChatToolBar.h */,
 				A049005B1D549729009E4CCC /* SLUChatToolBar.m */,
+				9E9336D124495A0600926831 /* EBPageView.h */,
+				9E9336D224495A0600926831 /* EBPageView.m */,
+				9E9336CC244959D300926831 /* IceTextField.h */,
+				9E9336CE244959D300926831 /* IceTextField.m */,
+				9E9336CD244959D300926831 /* UIImage+Extension.h */,
+				9E9336CB244959D300926831 /* UIImage+Extension.m */,
 				A04900561D54930E009E4CCC /* GlobalMethod */,
 				A04900501D5490AB009E4CCC /* UIView+Extension.h */,
 				A04900511D5490AB009E4CCC /* UIView+Extension.m */,
@@ -396,8 +441,6 @@
 				9EFFC6561FB1A4FD00FAB094 /* IceImageView.m */,
 				C6F246291F318481008BB1C1 /* KeyChainStore.h */,
 				C6F2462A1F318481008BB1C1 /* KeyChainStore.m */,
-				C67711151F386970006F931E /* IceTextView.h */,
-				C67711161F386970006F931E /* IceTextView.m */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -405,8 +448,15 @@
 		A04900561D54930E009E4CCC /* GlobalMethod */ = {
 			isa = PBXGroup;
 			children = (
+				9E18ACF021198F8E0048A92B /* NSData+NEUAES.h */,
+				9E18ACED21198F8D0048A92B /* NSData+NEUAES.m */,
+				9E18ACEA21198D0C0048A92B /* NSString+RXUtility.h */,
+				9E18ACEB21198D0C0048A92B /* NSString+RXUtility.m */,
+				9E18ACDF211943100048A92B /* NEUBase64 */,
 				A04900571D54930E009E4CCC /* SMGlobalMethod.h */,
 				A04900581D54930E009E4CCC /* SMGlobalMethod.m */,
+				9E18ACF32119973E0048A92B /* AES128Util.h */,
+				9E18ACF42119973E0048A92B /* AES128Util.m */,
 			);
 			path = GlobalMethod;
 			sourceTree = "<group>";
@@ -692,6 +742,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -851,11 +902,15 @@
 				A049005C1D549729009E4CCC /* SLUChatToolBar.m in Sources */,
 				C67710FD1F3868D3006F931E /* ViewControllerDemoFive.m in Sources */,
 				A04900551D549122009E4CCC /* ViewController.m in Sources */,
+				9E74C3D6222CC7A600A62FBA /* QRCodeView.m in Sources */,
 				C68C40F61F28939100FFF310 /* EmotionModel.m in Sources */,
 				C67711101F3868E6006F931E /* UIImage+DDF.m in Sources */,
 				9E115C811FB984E40002A7F4 /* UIView+EBAddMessage.m in Sources */,
 				A04900371D548F0E009E4CCC /* AppDelegate.m in Sources */,
 				A04900321D548F07009E4CCC /* IceViewController.m in Sources */,
+				9E74712E20D0F67600D28D19 /* TPLoanViewController.m in Sources */,
+				9E9336CF244959D300926831 /* UIImage+Extension.m in Sources */,
+				9E9336D0244959D300926831 /* IceTextField.m in Sources */,
 				C67711121F3868E6006F931E /* UITabBar+badge.m in Sources */,
 				A04900591D54930E009E4CCC /* SMGlobalMethod.m in Sources */,
 				9EFFC64E1FB1608E00FAB094 /* UIImageView+CornerRadius.m in Sources */,
@@ -863,8 +918,8 @@
 				C57B523B1E8E45F90074811D /* TimeHelper.m in Sources */,
 				9EFFC6541FB1A23B00FAB094 /* ShowPhotoVC.m in Sources */,
 				C68C40F71F28939100FFF310 /* EmoticonInputView.m in Sources */,
+				9E18ACDE211935810048A92B /* IceTextView.m in Sources */,
 				A04900301D548F07009E4CCC /* IceTabBarController.m in Sources */,
-				9E74712820D0F56D00D28D19 /* CutOutClearView.m in Sources */,
 				A049000C1D547068009E4CCC /* SecondViewController.m in Sources */,
 				C67710FC1F3868D3006F931E /* ViewControllerDemoFour.m in Sources */,
 				C677110F1F3868E6006F931E /* UIDevice+CJ.m in Sources */,
@@ -874,24 +929,28 @@
 				A049002E1D548F07009E4CCC /* IceNavigationController.m in Sources */,
 				9EFFC6511FB19B3D00FAB094 /* EPAlertViewShow.m in Sources */,
 				C677110E1F3868E6006F931E /* UIColor+DDF.m in Sources */,
-				9E74712620D0F56D00D28D19 /* QRCodeView.m in Sources */,
+				9E74C3D8222CC7A600A62FBA /* VideoDeviceAuthorization.m in Sources */,
+				9E9336D324495A0600926831 /* EBPageView.m in Sources */,
+				9E18ACF52119973E0048A92B /* AES128Util.m in Sources */,
 				C67710FE1F3868D3006F931E /* ViewControllerSix.m in Sources */,
 				A049001C1D548097009E4CCC /* ForthViewController.m in Sources */,
-				C67711171F386970006F931E /* IceTextView.m in Sources */,
+				9E74C3D7222CC7A600A62FBA /* QRCodeRectViewVC.m in Sources */,
 				C68C40F51F28939100FFF310 /* WBModel.m in Sources */,
+				9E18ACF121198F8E0048A92B /* NSData+NEUAES.m in Sources */,
 				9E657E6220C13BE500C64410 /* FSAES128.m in Sources */,
 				A04900381D548F0E009E4CCC /* main.m in Sources */,
+				9E18ACE3211943110048A92B /* NEUBase64.m in Sources */,
 				C67711131F3868E6006F931E /* UIView+AutoLayout.m in Sources */,
 				C6D1BD641F3031D700C38072 /* GetPhotoToolBar.m in Sources */,
 				C6777DEE1F29CC8D00093A37 /* IceCutScreen.m in Sources */,
 				A04900521D5490AB009E4CCC /* UIView+Extension.m in Sources */,
+				9E18ACEC21198D0C0048A92B /* NSString+RXUtility.m in Sources */,
 				C68C40F21F28939100FFF310 /* WBStatusHelper.m in Sources */,
 				A049000F1D54706F009E4CCC /* ThirdViewController.m in Sources */,
 				9EFFC6571FB1A4FD00FAB094 /* IceImageView.m in Sources */,
-				9E74712B20D0F57600D28D19 /* QRCodeRectViewVC.m in Sources */,
 				A04900311D548F07009E4CCC /* IceTableViewController.m in Sources */,
-				9E74712720D0F56D00D28D19 /* VideoDeviceAuthorization.m in Sources */,
 				A04900091D54705A009E4CCC /* FirstViewController.m in Sources */,
+				9E74C3D9222CC7A600A62FBA /* CutOutClearView.m in Sources */,
 				9E115C7B1FB9841F0002A7F4 /* JPFPSStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -38,7 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.view.backgroundColor = BackGroundColor;
     // Background view.
     self.blackView                 = [[UIView alloc] initWithFrame:self.view.bounds];
     self.blackView.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:1];

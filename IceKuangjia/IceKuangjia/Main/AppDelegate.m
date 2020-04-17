@@ -27,9 +27,46 @@
     self.window.rootViewController = tabBar;
     [self.window makeKeyAndVisible];
     
+    [self creatShortcutItem];  //动态创建应用图标上的3D touch快捷选项
+    
+    UIApplicationShortcutItem *shortcutItem = [launchOptions valueForKey:UIApplicationLaunchOptionsShortcutItemKey];
+    //如果是从快捷选项标签启动app，则根据不同标识执行不同操作，然后返回NO，防止调用- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+    if (shortcutItem) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            //判断设置的快捷选项标签唯一标识，根据不同标识执行不同操作
+            if([shortcutItem.type isEqualToString:@"com.yang.one"]){
+                NSLog(@"APP没被杀死-- 第一个按钮");
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"APPICONCLICK" object:@"0"];
+            } else if ([shortcutItem.type isEqualToString:@"com.yang.search"]) {
+                //进入搜索界面
+                NSLog(@"APP没被杀死-- 搜索");
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"APPICONCLICK" object:@"1"];
+            } else if ([shortcutItem.type isEqualToString:@"com.yang.add"]) {
+                //进入分享界面
+                NSLog(@"APP没被杀死-- 添加联系人");
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"APPICONCLICK" object:@"2"];
+            }else if ([shortcutItem.type isEqualToString:@"com.yang.share"]) {
+                //进入分享页面
+                NSLog(@"APP没被杀死-- 分享");
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"APPICONCLICK" object:@"3"];
+            }
+        });
+    }
+    
     return YES;
 }
-
+- (void)creatShortcutItem {
+    //创建系统风格的icon
+    UIApplicationShortcutIcon *icon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeShare];
+    //创建快捷选项
+    UIApplicationShortcutItem * item = [[UIApplicationShortcutItem alloc]initWithType:@"com.yang.one" localizedTitle:@"第一个按钮" localizedSubtitle:@"第一个副标题" icon:icon userInfo:nil];
+    UIApplicationShortcutItem * item1 = [[UIApplicationShortcutItem alloc]initWithType:@"com.yang.search" localizedTitle:@"搜索" localizedSubtitle:nil icon:icon userInfo:nil];
+    UIApplicationShortcutItem * item2 = [[UIApplicationShortcutItem alloc]initWithType:@"com.yang.add" localizedTitle:@"添加" localizedSubtitle:nil icon:icon userInfo:nil];
+    UIApplicationShortcutItem * item3 = [[UIApplicationShortcutItem alloc]initWithType:@"com.yang.share" localizedTitle:@"分享" localizedSubtitle:@"分享副标题" icon:icon userInfo:nil];
+    
+    //添加到快捷选项数组
+    [UIApplication sharedApplication].shortcutItems = @[item, item1, item2, item3];
+}
 
 #pragma mark - 语音播报
 - (void)start:(NSString *)str {
@@ -79,6 +116,33 @@
         }
     });
     
+}
+
+//如果APP没被杀死，还存在后台，点开Touch会调用该代理方法
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    if (shortcutItem) {
+        //判断设置的快捷选项标签唯一标识，根据不同标识执行不同操作
+        if([shortcutItem.type isEqualToString:@"com.yang.one"]){
+            NSLog(@"APP没被杀死-- 第一个按钮");
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"APPICONCLICK" object:@"0"];
+        } else if ([shortcutItem.type isEqualToString:@"com.yang.search"]) {
+            //进入搜索界面
+            NSLog(@"APP没被杀死-- 搜索");
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"APPICONCLICK" object:@"1"];
+        } else if ([shortcutItem.type isEqualToString:@"com.yang.add"]) {
+            //进入分享界面
+            NSLog(@"APP没被杀死-- 添加联系人");
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"APPICONCLICK" object:@"2"];
+        }else if ([shortcutItem.type isEqualToString:@"com.yang.share"]) {
+            //进入分享页面
+            NSLog(@"APP没被杀死-- 分享");
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"APPICONCLICK" object:@"3"];
+        }
+    }
+    
+    if (completionHandler) {
+        completionHandler(YES);
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

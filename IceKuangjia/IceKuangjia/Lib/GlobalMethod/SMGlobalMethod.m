@@ -480,8 +480,9 @@
     
     for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
         [output appendFormat:@"%02x", digest[i]];
+    NSString *upper = [output uppercaseString];
     
-    return  output;
+    return  upper;
 }
 + (Byte *) md5byte:(Byte *) byte {
 //    const char *cStr = [input UTF8String];

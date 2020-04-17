@@ -15,5 +15,6 @@
 #import "ColorHeader.h"
 #import <MJExtension/MJExtension.h>
 #import <MJRefresh/MJRefresh.h>
+#import "SMGlobalMethod.h"
 
 #endif /* PrefixHeader_pch */

@@ -96,6 +96,7 @@
             return self.plusBtn;
         }else{//如果点不在发布按钮身上，直接让系统处理就可以了
             
+            
             return [super hitTest:point withEvent:event];
         }
     }

@@ -48,7 +48,11 @@
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        [UIColor orangeColor], NSForegroundColorAttributeName,
                                                        nil] forState:UIControlStateSelected];
+    
+
 }
+
+
 /**
  *  添加一个子控制器
  *
